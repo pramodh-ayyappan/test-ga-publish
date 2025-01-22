@@ -19,6 +19,7 @@ jobs:
 
       - name: Package and publish chart
         run: |
+          rm -rf charts
           for dir in */; do
             if [[ "$dir" != .* ]] && [[ "$dir" != "charts/" ]] && [[ -f "$dir/Chart.yaml" ]]; then
               helm package "$dir"
@@ -49,4 +50,3 @@ jobs:
           keep_files: true
           force_orphan: false
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          destination_dir: ${{ github.ref_name }}
