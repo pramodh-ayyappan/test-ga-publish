@@ -38,6 +38,7 @@ jobs:
 
           ls -la charts/
           ls -la charts/${{ env.BRANCH }}/
+          echo "Branch Name ${{ github.head_ref }}"
       
       # - name: Commit and push changes
       #   if: github.ref == 'refs/heads/main'
