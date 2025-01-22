@@ -1,0 +1,69 @@
+{{- $releaseName := .Release.Name }}
+{{- $sa := printf "%s-sa" $releaseName }}
+{{- $role := printf "%s-role" $releaseName }}
+{{- $rolebinding := printf "%s-rb" $releaseName }}
+{{- $schedules := .Values.scalingSchedules }}
+{{- range $scheduleName, $schedule := $schedules }}
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: "{{ printf "%s-%s" $releaseName $scheduleName | lower }}"
+spec:
+  schedule: "{{ $schedule.schedule }}"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          serviceAccountName: {{ $sa }}
+          containers:
+            - name: scaling-job
+              image: bitnami/kubectl:1.21
+              command:
+                - /bin/sh
+                - -c
+                - |
+                  {{- if eq (default "v2" $schedule.hpaVersion) "v1" }}
+                  PATCH_JSON=$(printf '{"spec":{"minReplicas":%d,"maxReplicas":%d,"targetCPUUtilizationPercentage":%d}}' {{ $schedule.minReplicas }} {{ $schedule.maxReplicas }} {{ $schedule.cpuPercent }})
+                  {{- else }}
+                  PATCH_JSON=$(printf '{"spec":{"minReplicas":%d,"maxReplicas":%d,"metrics":[{"type":"Resource","resource":{"name":"cpu","target":{"type":"Utilization","averageUtilization":%d}}}]}}' {{ $schedule.minReplicas }} {{ $schedule.maxReplicas }} {{ $schedule.cpuPercent }})
+                  {{- end }}
+                  kubectl patch hpa {{ $schedule.hpa }} -p "$PATCH_JSON" -n {{ default $schedule.namespace "default" }}
+          restartPolicy: OnFailure
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 1
+  failedJobsHistoryLimit: 1
+{{ end }}
+
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: {{ $sa }}
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: {{ $role }}
+rules:
+- apiGroups: ["autoscaling"]
+  resources: ["horizontalpodautoscalers"]
+  verbs: ["create", "get", "list", "update", "patch"]
+- apiGroups: ["apps"]
+  resources: ["deployments"]
+  verbs: ["get", "list"]
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: {{ $rolebinding }}
+subjects:
+- kind: ServiceAccount
+  name: {{ $sa }}
+  namespace: default
+roleRef:
+  kind: ClusterRole
+  name: {{ $role }}
+  apiGroup: rbac.authorization.k8s.io

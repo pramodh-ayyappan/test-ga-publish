@@ -1,0 +1,11 @@
+apiVersion: v2
+name: scheduled-deployment-scaler
+version: 0.1.0
+appVersion: 1.0
+description: A Helm chart to schedule scaling of a deployment in a Kubernetes cluster
+home: https://facets-cloud.github.io
+sources:
+  - https://github.com/Facets-cloud/helm-charts/tree/master/scheduled-deployment-scaler
+maintainers:
+  - name: Rohit Ravendran
+    email: rohit@facets.cloud
