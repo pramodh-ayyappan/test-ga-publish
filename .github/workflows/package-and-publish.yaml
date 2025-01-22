@@ -3,6 +3,9 @@ name: Package and Publish Helm Chart
 on:
   workflow_dispatch:
 
+env:
+  BRANCH: gh-pages
+
 jobs:
   package:
     runs-on: ubuntu-latest
