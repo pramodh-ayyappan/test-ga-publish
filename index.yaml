@@ -3,23 +3,23 @@ entries:
   azure-nfs-log-collector:
   - apiVersion: v2
     appVersion: "1.0"
-    created: "2025-01-22T15:51:33.600104985Z"
+    created: "2025-01-22T15:59:45.488506257Z"
     description: A Helm chart for azure logging substack
-    digest: c17a1e8b1d8606920a356e729597a03b9ddaebe0fb49f75c6806d313ad38f226
+    digest: 5f7c4702c927dcab3ce18d0a013a45132d4266238d89ef52a309f90099da2ddb
     home: https://facets-cloud.github.io
     maintainers:
     - email: rohit@facets.cloud
       name: Rohit Raveendran
     name: azure-nfs-log-collector
     urls:
-    - gh-pages/azure-nfs-log-collector-0.1.0.tgz
+    - feat_version_controlled_charts/azure-nfs-log-collector-0.1.0.tgz
     version: 0.1.0
   database-operator:
   - apiVersion: v2
     appVersion: 1.0.1
-    created: "2025-01-22T15:51:33.600700304Z"
+    created: "2025-01-22T15:59:45.48904285Z"
     description: A Helm chart for database operator
-    digest: bb72b92127e2546b5640824f865324f0cbe9ec9c7849ccf3e0f06929da790550
+    digest: 5434c2829c115e9ad5e4cbff486c115b0457dc686d044153ca26955570bcb683
     home: https://facets-cloud.github.io
     maintainers:
     - email: pramodh.ayyappan@facets.cloud
@@ -29,14 +29,14 @@ entries:
     - https://github.com/Facets-cloud/helm-charts/tree/master/database-operator
     type: application
     urls:
-    - gh-pages/database-operator-1.0.1.tgz
+    - feat_version_controlled_charts/database-operator-1.0.1.tgz
     version: 1.0.1
   facets-notification-controller:
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-01-22T15:51:33.601023756Z"
+    created: "2025-01-22T15:59:45.489617834Z"
     description: A Helm chart for facets notification controller
-    digest: 160f99528bac3f753386e99ebdbe90418ed61e16ca42d428e4e3b5a03d74f2d9
+    digest: 08781493d5b0f0f5b731e78c646281a5b5e318a8f19d023351ed047be7d4b0e9
     home: https://facets-cloud.github.io
     maintainers:
     - email: vishnu.kv@facets.cloud
@@ -44,62 +44,62 @@ entries:
     name: facets-notification-controller
     type: application
     urls:
-    - gh-pages/facets-notification-controller-0.1.0.tgz
-    version: 0.1.0
+    - feat_version_controlled_charts/facets-notification-controller-0.1.1.tgz
+    version: 0.1.1
   facets-uptime-monitoring:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2025-01-22T15:51:33.601556088Z"
+    created: "2025-01-22T15:59:45.49074886Z"
     description: A Helm chart for creating facets-uptime-monitoring operator
-    digest: 8a3742b29c4504ca9046d5174503967bdf566fc096beddfdb207d102c9d6f9ba
+    digest: 0659e06f09bdaac8bc92b65a81362b96775a1128d77e7d4a55de8d59a99452a1
     name: facets-uptime-monitoring
     type: application
     urls:
-    - gh-pages/facets-uptime-monitoring-0.1.0.tgz
+    - feat_version_controlled_charts/facets-uptime-monitoring-0.1.0.tgz
     version: 0.1.0
   kube-audit-rest:
   - apiVersion: v2
     appVersion: 7c6b957ec970acc705d95a1fac72ea7a15bef9c4
-    created: "2025-01-22T15:51:33.602261732Z"
+    created: "2025-01-22T15:59:45.491486979Z"
     description: |
       A helm chart for kube-audit-rest. Self Hosted Audit logs for Kubernetes.
 
       kube-audit-rest originally created by RichardoC
       https://github.com/RichardoC/kube-audit-rest/
-    digest: 334f6e02cc69b3b14ed5e7a43e159ee0bf5e53555ad40e05d8dabd788f5db92e
+    digest: 0bae22b6cbe8f1d3ebe2c636e5462fe294d543532c634420f7400b2854f44ddf
     name: kube-audit-rest
     type: application
     urls:
-    - gh-pages/kube-audit-rest-0.1.0.tgz
+    - feat_version_controlled_charts/kube-audit-rest-0.1.0.tgz
     version: 0.1.0
   kubectl-crons:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-01-22T15:51:33.602660264Z"
+    created: "2025-01-22T15:59:45.491740793Z"
     description: A Helm chart for clusters to delete unwanted Pods based on their status
-    digest: af9375f3e6c7630966fbcd592cab71850feeeed240a734b83952d980dec8b9ef
+    digest: 30c2d3c0b40a91c3cc2a862096787d8da245abab8414772285a05b5d671cdcd1
     name: kubectl-crons
     type: application
     urls:
-    - gh-pages/kubectl-crons-0.2.0.tgz
+    - feat_version_controlled_charts/kubectl-crons-0.2.0.tgz
     version: 0.2.0
   mongodb-auth-operator:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-01-22T15:51:33.603185683Z"
+    created: "2025-01-22T15:59:45.492258641Z"
     description: A Helm chart for Kubernetes
-    digest: 7881659d6203fd168c9dc0bd30227125eb9185be7c63a5e53453b2b699f8342c
+    digest: e425bf86a6cd5f5f91866108cd67b6c312871d96fa12a505fbfd6d350521936d
     name: mongodb-auth-operator
     type: application
     urls:
-    - gh-pages/mongodb-auth-operator-0.1.0.tgz
+    - feat_version_controlled_charts/mongodb-auth-operator-0.1.0.tgz
     version: 0.1.0
   scheduled-deployment-scaler:
   - apiVersion: v2
     appVersion: "1"
-    created: "2025-01-22T15:51:33.603429808Z"
+    created: "2025-01-22T15:59:45.492438938Z"
     description: A Helm chart to schedule scaling of a deployment in a Kubernetes cluster
-    digest: 12c172cd58915dbc2f102c7bc8aaf061a3f54028d039624df65924f164654db8
+    digest: 7042137b9b4db88a4140ff1ddcadaf1e535519bf03e7962195e566057c546cb8
     home: https://facets-cloud.github.io
     maintainers:
     - email: rohit@facets.cloud
@@ -108,14 +108,14 @@ entries:
     sources:
     - https://github.com/Facets-cloud/helm-charts/tree/master/scheduled-deployment-scaler
     urls:
-    - gh-pages/scheduled-deployment-scaler-0.1.0.tgz
+    - feat_version_controlled_charts/scheduled-deployment-scaler-0.1.0.tgz
     version: 0.1.0
   scheduled-hpa-updater:
   - apiVersion: v2
     appVersion: "1"
-    created: "2025-01-22T15:51:33.603627686Z"
+    created: "2025-01-22T15:59:45.492653218Z"
     description: A Helm chart to update autoscaling configuration of a deployment in a Kubernetes cluster
-    digest: 8647495f16768ac2fe749660956fc49a960b69ed448a9f15855f8644cd967548
+    digest: 4fbb6f8d87253d1b0247ba9dc20036e426edcf6d24ad0ff50e2ff52b0df258de
     home: https://facets-cloud.github.io
     maintainers:
     - email: rohit@facets.cloud
@@ -124,25 +124,25 @@ entries:
     sources:
     - https://github.com/Facets-cloud/helm-charts/tree/master/scheduled-hpa-updater
     urls:
-    - gh-pages/scheduled-hpa-updater-0.2.0.tgz
+    - feat_version_controlled_charts/scheduled-hpa-updater-0.2.0.tgz
     version: 0.2.0
   secret-copier:
   - apiVersion: v1
-    created: "2025-01-22T15:51:33.603969623Z"
+    created: "2025-01-22T15:59:45.492987232Z"
     description: Used to copy secrets from default namespace to all other namespaces.
-    digest: 176ad3498827be5703c84ada2e942a40872d36dd827b29a43e812826bda4de75
+    digest: 48ad079be8ef095546ec2b893132d6d190c1cab342955448e436e2d9af13588a
     name: secret-copier
     urls:
-    - gh-pages/secret-copier-1.0.1.tgz
+    - feat_version_controlled_charts/secret-copier-1.0.1.tgz
     version: 1.0.1
   windows-exporter:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-01-22T15:51:33.60426807Z"
+    created: "2025-01-22T15:59:45.493312159Z"
     description: A Helm chart to deploy windows-exporter and register to prometheus via podmonitor in a k8s cluster
-    digest: 17599fff668c27bbd761f6598c30420c1fb40f088689815e0f0849f42bad7124
+    digest: 7f9e674f805b25e48f6cb8640a81ffcff5f2f141cbdb16375012cfd7f09a4839
     name: windows-exporter
     urls:
-    - gh-pages/windows-exporter-0.1.0.tgz
+    - feat_version_controlled_charts/windows-exporter-0.1.0.tgz
     version: 0.1.0
-generated: "2025-01-22T15:51:33.598997087Z"
+generated: "2025-01-22T15:59:45.48767846Z"
