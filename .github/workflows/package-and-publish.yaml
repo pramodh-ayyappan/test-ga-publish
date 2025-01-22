@@ -28,7 +28,7 @@ jobs:
             fi
           done
           mkdir -p charts
-          if [[ "${{ env.BRANCH }}" != "master" ]]; then
+          if [[ "${{ env.BRANCH }}" != "main" ]]; then
             mkdir -p "charts/${{ env.BRANCH }}"
             mv *.tgz "charts/${{ env.BRANCH }}/"
           else
@@ -37,13 +37,13 @@ jobs:
           helm repo index charts/
       
       - name: Commit and push changes
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/main'
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add ../charts/
           git commit -m "Updated Helm charts"
-          git push origin master
+          git push origin main
 
       - name: Publish to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
