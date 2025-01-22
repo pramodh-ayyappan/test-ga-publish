@@ -32,6 +32,10 @@ jobs:
            mv *.tgz charts/
           fi
           helm repo index charts/
+
+      - name: Set exclude_assets
+        if: github.ref == 'refs/heads/main'
+        run: echo "exclude_assets='!*.tgz'" >> $GITHUB_ENV
       
       # - name: Commit and push changes
       #   if: github.ref == 'refs/heads/main'
@@ -49,3 +53,4 @@ jobs:
           keep_files: true
           force_orphan: false
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          exclude_assets: ${{ env.exclude_assets }}
