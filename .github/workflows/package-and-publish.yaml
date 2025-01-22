@@ -52,4 +52,4 @@ jobs:
           keep_files: true
           force_orphan: false
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          branch: ${{ env.BRANCH }}
+          destination_dir: ${{ env.BRANCH }}
