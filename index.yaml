@@ -3,9 +3,9 @@ entries:
   azure-nfs-log-collector:
   - apiVersion: v2
     appVersion: "1.0"
-    created: "2025-01-22T16:35:54.877456967Z"
+    created: "2025-01-22T16:53:30.597827776Z"
     description: A Helm chart for azure logging substack
-    digest: 0df32058a9fe652828aa2816d45588c4cc36ce38dd11ccad518cfb3f18b86924
+    digest: a21285b607ecf911602a66cb8e923f967c1e8357b24bd87296bafdda9d903957
     home: https://facets-cloud.github.io
     maintainers:
     - email: rohit@facets.cloud
@@ -16,7 +16,7 @@ entries:
     version: 0.1.0
   - apiVersion: v2
     appVersion: "1.0"
-    created: "2025-01-22T16:35:54.88289386Z"
+    created: "2025-01-22T16:53:30.602503464Z"
     description: A Helm chart for azure logging substack
     digest: fac58707f66b22ee8f1fd7159a9003b7774a6326e4186f00387fac38824a25d7
     home: https://facets-cloud.github.io
@@ -30,9 +30,9 @@ entries:
   database-operator:
   - apiVersion: v2
     appVersion: 1.0.1
-    created: "2025-01-22T16:35:54.878266468Z"
+    created: "2025-01-22T16:53:30.598404613Z"
     description: A Helm chart for database operator
-    digest: d1da56150a15750dcb403932b9dc35887bf116f0f02ca74e3f30e260767de3df
+    digest: e72392b05ae7f48ca6b64d41ac85d49ba4564dbf8a4c9e80d4ad93a36ae4725c
     home: https://facets-cloud.github.io
     maintainers:
     - email: pramodh.ayyappan@facets.cloud
@@ -46,7 +46,7 @@ entries:
     version: 1.0.1
   - apiVersion: v2
     appVersion: 1.0.1
-    created: "2025-01-22T16:35:54.883437562Z"
+    created: "2025-01-22T16:53:30.6030152Z"
     description: A Helm chart for database operator
     digest: 179a80bf5affacd02052579169b82aa97efbbb35c2267f350cbd0b0abebd3080
     home: https://facets-cloud.github.io
@@ -63,9 +63,9 @@ entries:
   facets-notification-controller:
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-01-22T16:35:54.879226759Z"
+    created: "2025-01-22T16:53:30.598729319Z"
     description: A Helm chart for facets notification controller
-    digest: 589007c5ef01e522ad0fde53080dbb4f55e0687e15dbcc15fdf4245b355647ae
+    digest: 29787c46389d392f2546d40428a8eb9829ecc347e8db502540c40feb4646636b
     home: https://facets-cloud.github.io
     maintainers:
     - email: vishnu.kv@facets.cloud
@@ -77,7 +77,7 @@ entries:
     version: 0.1.0
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-01-22T16:35:54.883742866Z"
+    created: "2025-01-22T16:53:30.603304029Z"
     description: A Helm chart for facets notification controller
     digest: 93c5582c85da492ccae753e9ab0d3e1d5639eee889221dfca49329a1863bb0ec
     home: https://facets-cloud.github.io
@@ -92,9 +92,9 @@ entries:
   facets-uptime-monitoring:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2025-01-22T16:35:54.879765722Z"
+    created: "2025-01-22T16:53:30.599204806Z"
     description: A Helm chart for creating facets-uptime-monitoring operator
-    digest: aa41c06ae3b1f394e8bdd15a9105fcc13c11f89f4a69b94a361d749f8318a68f
+    digest: 1b5d022787d5daf4d13ea8977793bac69cbc0d79eb6a4b6953b0c360a35c964d
     name: facets-uptime-monitoring
     type: application
     urls:
@@ -102,7 +102,7 @@ entries:
     version: 0.1.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2025-01-22T16:35:54.884253886Z"
+    created: "2025-01-22T16:53:30.604414201Z"
     description: A Helm chart for creating facets-uptime-monitoring operator
     digest: bd926f3a17788d98c63123615e39eef6641b255c901c938489ecc16281ced360
     name: facets-uptime-monitoring
@@ -113,13 +113,13 @@ entries:
   kube-audit-rest:
   - apiVersion: v2
     appVersion: 7c6b957ec970acc705d95a1fac72ea7a15bef9c4
-    created: "2025-01-22T16:35:54.880476718Z"
+    created: "2025-01-22T16:53:30.599934889Z"
     description: |
       A helm chart for kube-audit-rest. Self Hosted Audit logs for Kubernetes.
 
       kube-audit-rest originally created by RichardoC
       https://github.com/RichardoC/kube-audit-rest/
-    digest: ee5a181b984a610d28c08249ec6718db0ab4307e8fd9be2ee74671ad88b48f20
+    digest: ab3fad61ef122c54cbc7713112f80cad9265896b588307e83c5700776256bb71
     name: kube-audit-rest
     type: application
     urls:
@@ -127,7 +127,7 @@ entries:
     version: 0.1.0
   - apiVersion: v2
     appVersion: 7c6b957ec970acc705d95a1fac72ea7a15bef9c4
-    created: "2025-01-22T16:35:54.884979109Z"
+    created: "2025-01-22T16:53:30.605303647Z"
     description: |
       A helm chart for kube-audit-rest. Self Hosted Audit logs for Kubernetes.
 
@@ -142,9 +142,9 @@ entries:
   kubectl-crons:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-01-22T16:35:54.880700379Z"
+    created: "2025-01-22T16:53:30.600153838Z"
     description: A Helm chart for clusters to delete unwanted Pods based on their status
-    digest: 0678a0232957d3019b29ca4196385ab7f4d6ca143c87478648a25e5b72747aad
+    digest: 45d3be86038ade1eb969691e7c135b062533f4db7e7d8c782994de8749112aa6
     name: kubectl-crons
     type: application
     urls:
@@ -152,7 +152,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-01-22T16:35:54.885203421Z"
+    created: "2025-01-22T16:53:30.605568351Z"
     description: A Helm chart for clusters to delete unwanted Pods based on their status
     digest: 8017c7eccf3fe76185ba12b3ebda7ef9039b66b5fd5baadfa8fd6f6ade5e0c8b
     name: kubectl-crons
@@ -163,9 +163,9 @@ entries:
   mongodb-auth-operator:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-01-22T16:35:54.881207231Z"
+    created: "2025-01-22T16:53:30.600864956Z"
     description: A Helm chart for Kubernetes
-    digest: 0cde2f0044d1a51e953612b332019b56b4e1eb0d750c63e4f541a4cc9ac39129
+    digest: 2272fd90527aafc77e99ead6923775051e82463fcb1701fbc46479f8f6e4c340
     name: mongodb-auth-operator
     type: application
     urls:
@@ -173,7 +173,7 @@ entries:
     version: 0.1.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-01-22T16:35:54.885718769Z"
+    created: "2025-01-22T16:53:30.606129279Z"
     description: A Helm chart for Kubernetes
     digest: b75266d3c3ba197b7ecbbbe88c0411a42b075cbaa25303cf7433c639ba12e0ca
     name: mongodb-auth-operator
@@ -184,9 +184,9 @@ entries:
   scheduled-deployment-scaler:
   - apiVersion: v2
     appVersion: "1"
-    created: "2025-01-22T16:35:54.881404161Z"
+    created: "2025-01-22T16:53:30.601055642Z"
     description: A Helm chart to schedule scaling of a deployment in a Kubernetes cluster
-    digest: c0fcf2151494fa1f8408d105a7afda957e4d1478ce413397100116b7b0a62eff
+    digest: 2736a51a3ddca2b2da959435ad5c165798d7b4537ce931d4b2d2cf5164cbb6c4
     home: https://facets-cloud.github.io
     maintainers:
     - email: rohit@facets.cloud
@@ -199,7 +199,7 @@ entries:
     version: 0.1.0
   - apiVersion: v2
     appVersion: "1"
-    created: "2025-01-22T16:35:54.886283811Z"
+    created: "2025-01-22T16:53:30.606310597Z"
     description: A Helm chart to schedule scaling of a deployment in a Kubernetes cluster
     digest: eb6d4a5eec8573d1bb6a00f32f3abf0eb4693c0f22157c682742c791a8824afa
     home: https://facets-cloud.github.io
@@ -215,9 +215,9 @@ entries:
   scheduled-hpa-updater:
   - apiVersion: v2
     appVersion: "1"
-    created: "2025-01-22T16:35:54.881617091Z"
+    created: "2025-01-22T16:53:30.601244564Z"
     description: A Helm chart to update autoscaling configuration of a deployment in a Kubernetes cluster
-    digest: 6dabcd841b1ff702bdf875ff1b3d9c61055a3d76d37050b8c2211961652d37ff
+    digest: 0b5dabdbaefab308e0c8b4359a36cfed80005efa1b91614465545e77b9700e64
     home: https://facets-cloud.github.io
     maintainers:
     - email: rohit@facets.cloud
@@ -230,7 +230,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: "1"
-    created: "2025-01-22T16:35:54.886689383Z"
+    created: "2025-01-22T16:53:30.606495913Z"
     description: A Helm chart to update autoscaling configuration of a deployment in a Kubernetes cluster
     digest: b559f5bcf1ebc2a5e4c5716824e1e82f312130d613d52ac114933a915fc63ff5
     home: https://facets-cloud.github.io
@@ -245,15 +245,15 @@ entries:
     version: 0.2.0
   secret-copier:
   - apiVersion: v1
-    created: "2025-01-22T16:35:54.881950808Z"
+    created: "2025-01-22T16:53:30.60159017Z"
     description: Used to copy secrets from default namespace to all other namespaces.
-    digest: 276c31cd2a0dafedb4e3459aa149ad031d09984e8db7f13a323e29c04a94bce7
+    digest: a6ec1b7ee88af870a597d5585b1e39b1ac63bc1de23f4a84fad2c209d1128628
     name: secret-copier
     urls:
     - secret-copier-1.0.1.tgz
     version: 1.0.1
   - apiVersion: v1
-    created: "2025-01-22T16:35:54.887357266Z"
+    created: "2025-01-22T16:53:30.606824256Z"
     description: Used to copy secrets from default namespace to all other namespaces.
     digest: 32dc158ecfa79b57e72d3a069172b4724ca901188695224c3beecefafa69d920
     name: secret-copier
@@ -263,20 +263,20 @@ entries:
   windows-exporter:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-01-22T16:35:54.88223361Z"
+    created: "2025-01-22T16:53:30.601882696Z"
     description: A Helm chart to deploy windows-exporter and register to prometheus via podmonitor in a k8s cluster
-    digest: b44430e728cb33bbf7a0b0f3d8fafcb8a7416464aa03ed9d37ec0e564d64e5c6
+    digest: a9b179e65e31c7acd3f1d95eecbb74c40a5f732780a55661258077c573adcdbd
     name: windows-exporter
     urls:
     - windows-exporter-0.1.0.tgz
     version: 0.1.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-01-22T16:35:54.887692165Z"
+    created: "2025-01-22T16:53:30.607100692Z"
     description: A Helm chart to deploy windows-exporter and register to prometheus via podmonitor in a k8s cluster
     digest: da26631b28bab3f48881e03a912d3d0fe2ee7083033ba79122dd4c3538b57221
     name: windows-exporter
     urls:
     - gh-pages/windows-exporter-0.1.0.tgz
     version: 0.1.0
-generated: "2025-01-22T16:35:54.876587894Z"
+generated: "2025-01-22T16:53:30.596773378Z"
