@@ -13,43 +13,31 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Helm
+      - name: Package and publish chart
         run: |
           sudo apt-get update
           sudo apt-get install -y curl
           curl https://get.helm.sh/helm-v3.5.1-linux-amd64.tar.gz | tar xz
-          sudo mv linux-amd64/helm /usr/local/bin/helm
-
-      - name: Package and publish chart
-        run: |
-          for dir in */; do
-            if [[ "$dir" != .* ]] && [[ "$dir" != "charts/" ]] && [[ -f "$dir/Chart.yaml" ]]; then
-              helm package "$dir"
-            fi
-          done
+          ./linux-amd64/helm package kubectl-crons
+          ./linux-amd64/helm package scheduled-deployment-scaler
+          ./linux-amd64/helm package windows-exporter
+          ./linux-amd64/helm package facets-notification-controller
+          ./linux-amd64/helm package azure-nfs-log-collector
+          ./linux-amd64/helm package database-operator
+          ./linux-amd64/helm package scheduled-hpa-updater
+          ./linux-amd64/helm package facets-uptime-monitoring
+          ./linux-amd64/helm package secret-copier
+          ./linux-amd64/helm package kube-audit-rest
+          ./linux-amd64/helm package mongodb-auth-operator
           mkdir -p charts
-          if [[ "${{ github.ref_name }}" != "main" ]]; then
-            mkdir -p "charts/${{ github.ref_name }}"
-            mv *.tgz "charts/${{ github.ref_name }}"
-          else
-           mv *.tgz charts/
-          fi
-          helm repo index charts/
-      
-      # - name: Commit and push changes
-      #   if: github.ref == 'refs/heads/main'
-      #   run: |
-      #     git config --global user.name "${{ github.actor }}"
-      #     git config --global user.email "${{ github.actor }}@users.noreply.github.com"
-      #     git add ./charts/
-      #     git commit -m "Updated Helm charts"
-      #     git push origin main
+          mv *.tgz charts/
+          ./linux-amd64/helm repo index charts/
 
       - name: Publish to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          publish_dir: ./charts
+          publish_dir: charts
           keep_files: true
           force_orphan: false
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          deploy_key: ${{ secrets.DEPLOY_KEY }}
           branch: ${{ env.BRANCH }}
