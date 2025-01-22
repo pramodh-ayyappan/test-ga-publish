@@ -19,7 +19,6 @@ jobs:
 
       - name: Package and publish chart
         run: |
-          rm -rf charts
           for dir in */; do
             if [[ "$dir" != .* ]] && [[ "$dir" != "charts/" ]] && [[ -f "$dir/Chart.yaml" ]]; then
               helm package "$dir"
@@ -47,6 +46,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           publish_dir: ./charts
-          keep_files: false
+          keep_files: true
           force_orphan: false
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
