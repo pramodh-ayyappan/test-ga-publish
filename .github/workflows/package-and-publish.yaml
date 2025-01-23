@@ -20,11 +20,26 @@ jobs:
           curl https://get.helm.sh/helm-v3.5.1-linux-amd64.tar.gz | tar xz
           sudo mv linux-amd64/helm /usr/local/bin/helm
 
-      - name: Download a single artifact
-        uses: actions/download-artifact@v4
+      - name: Check if artifact exists
+        id: check_artifact
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const artifactName = 'helm-charts';
+            const artifacts = await github.rest.actions.listArtifactsForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo
+            });
+            return artifacts.data.artifacts.some(artifact => artifact.name === artifactName);
+          result-encoding: string
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Download artifact
+        if: steps.check_artifact.outputs.result == 'true'
+        uses: actions/download-artifact@v3
         with:
           name: helm-charts
-          path: charts
 
       - name: Package and publish chart
         run: |
