@@ -12,8 +12,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+      
+      - name: Checkout gh-page branch code
+        uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          ref: gh-pages
+          path: /tmp/charts
       
       - name: Set up Helm
         run: |
@@ -24,17 +28,7 @@ jobs:
       
       - name: Get previous build charts
         run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          if git show-ref --verify --quiet refs/heads/gh-pages; then
-            git checkout gh-pages
-            mkdir -p /tmp/charts
-            cp *.tgz /tmp/charts
-            git checkout main
-            cp /tmp/charts/*.tgz charts
-          else
-            echo "gh-pages branch does not exist. Skipping chart retrieval."
-          fi
+          cp /tmp/charts/*.tgz charts
 
       # - name: Check if artifact exists and get workflow ID
       #   id: check_artifact
