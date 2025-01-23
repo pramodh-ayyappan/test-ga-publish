@@ -61,6 +61,7 @@ jobs:
           name: ${{ env.ZIP_NAME }}
           path: charts/
           run-id: ${{ steps.check_artifact.outputs.workflowId }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
 
       - name: Package and publish chart
