@@ -60,7 +60,7 @@ jobs:
         with:
           name: ${{ env.ZIP_NAME }}
           path: charts/
-          run_id: ${{ steps.check_artifact.outputs.workflowId }}
+          run-id: ${{ steps.check_artifact.outputs.workflowId }}
 
 
       - name: Package and publish chart
