@@ -3,6 +3,9 @@ name: Package and Publish Helm Chart
 on:
   workflow_dispatch:
 
+env:
+  ZIP_NAME: helm-charts
+
 jobs:
   package:
     runs-on: ubuntu-latest
@@ -22,11 +25,14 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: |
-            const artifactName = 'helm-charts';
+            const artifactName = '${{ env.ZIP_NAME }}';
             const artifacts = await github.rest.actions.listArtifactsForRepo({
               owner: context.repo.owner,
               repo: context.repo.repo
             });
+            console.log(artifacts);
+            console.log(artifacts.name);
+            console.log(artifacts.data.artifacts);
             return artifacts.data.artifacts.some(artifact => artifact.name === artifactName);
           result-encoding: string
         env:
@@ -36,7 +42,7 @@ jobs:
         if: steps.check_artifact.outputs.result == 'true'
         uses: actions/download-artifact@v3
         with:
-          name: helm-charts
+          name: ${{ env.ZIP_NAME }}
           path: charts/
 
       - name: Package and publish chart
@@ -54,7 +60,7 @@ jobs:
       - name: 'Upload zipped charts as Artifact'
         uses: actions/upload-artifact@v4
         with:
-          name: helm-charts
+          name: ${{ env.ZIP_NAME }}
           path: ./charts/
 
       - name: Publish to GitHub Pages
