@@ -3,9 +3,6 @@ name: Package and Publish Helm Chart
 on:
   workflow_dispatch:
 
-# env:
-#   ZIP_NAME: helm-charts
-
 jobs:
   package:
     runs-on: ubuntu-latest
@@ -13,7 +10,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       
-      - name: Checkout gh-page branch code
+      - name: Checkout gh-pages branch code
         uses: actions/checkout@v4
         with:
           ref: gh-pages
@@ -22,58 +19,14 @@ jobs:
       - name: Set up Helm
         run: |
           sudo apt-get update
-          sudo apt-get install -y curl
-          curl https://get.helm.sh/helm-v3.5.1-linux-amd64.tar.gz | tar xz
+          sudo apt-get install -y curl tar
+          curl -sSL https://get.helm.sh/helm-v3.5.1-linux-amd64.tar.gz | tar xz
           sudo mv linux-amd64/helm /usr/local/bin/helm
       
       - name: Get previous build charts
         run: |
           mkdir -p charts
           cp tmp/charts/*.tgz charts
-
-      # - name: Check if artifact exists and get workflow ID
-      #   id: check_artifact
-      #   uses: actions/github-script@v6
-      #   with:
-      #     script: |
-      #       const artifactName = process.env.ZIP_NAME;
-      #       const artifacts = await github.rest.actions.listArtifactsForRepo({
-      #         owner: context.repo.owner,
-      #         repo: context.repo.repo
-      #       });
-            
-      #       // Filter artifacts by name
-      #       const filteredArtifacts = artifacts.data.artifacts.filter(artifact => artifact.name === artifactName);
-            
-      #       if (filteredArtifacts.length === 0) {
-      #         console.log(`No artifact found with the name: ${artifactName}`);
-      #         core.setOutput('exists', 'false');
-      #         return;
-      #       }
-            
-      #       // Find the latest artifact by creation date
-      #       const latestArtifact = filteredArtifacts.reduce((latest, current) => 
-      #         new Date(current.created_at) > new Date(latest.created_at) ? current : latest
-      #       );
-
-      #       console.log(`Latest artifact found:`, latestArtifact);
-      #       core.setOutput('exists', 'true');
-      #       core.setOutput('workflowId', latestArtifact.workflow_run.id);
-      #     result-encoding: string
-      #     debug: true
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #     ZIP_NAME: ${{ env.ZIP_NAME }}
-
-      # - name: Download artifact
-      #   if: steps.check_artifact.outputs.exists == 'true'
-      #   uses: actions/download-artifact@v4
-      #   with:
-      #     name: ${{ env.ZIP_NAME }}
-      #     path: charts/
-      #     run-id: ${{ steps.check_artifact.outputs.workflowId }}
-      #     github-token: ${{ secrets.GITHUB_TOKEN }}
-
 
       - name: Package and publish chart
         run: |
@@ -85,12 +38,6 @@ jobs:
           mv *.tgz charts/
           helm repo index charts/
           ls -la charts
-      
-      # - name: 'Upload zipped charts as Artifact'
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: ${{ env.ZIP_NAME }}
-      #     path: ./charts/
 
       - name: Publish to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
