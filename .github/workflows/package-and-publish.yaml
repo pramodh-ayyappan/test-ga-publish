@@ -26,7 +26,7 @@ jobs:
         with:
           script: |
             const artifactName = '${{ env.ZIP_NAME }}';
-            const artifacts = await github.rest.actions.listArtifactsForRepo({
+            const artifacts = await github.rest.actions.artifacts({
               owner: context.repo.owner,
               repo: context.repo.repo
             });
@@ -35,6 +35,7 @@ jobs:
             console.log(artifacts.data.artifacts);
             return artifacts.data.artifacts.some(artifact => artifact.name === artifactName);
           result-encoding: string
+          debug: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
