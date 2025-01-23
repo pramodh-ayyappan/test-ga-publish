@@ -3,9 +3,6 @@ name: Package and Publish Helm Chart
 on:
   workflow_dispatch:
 
-env:
-  BRANCH: gh-pages
-
 jobs:
   package:
     runs-on: ubuntu-latest
@@ -66,4 +63,3 @@ jobs:
           keep_files: false
           force_orphan: false
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          branch: ${{ env.BRANCH }}
