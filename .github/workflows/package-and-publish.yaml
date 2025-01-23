@@ -49,6 +49,7 @@ jobs:
           mkdir -p charts
           mv *.tgz charts/
           helm repo index charts/
+          ls -la charts
       
       - name: 'Upload zipped charts as Artifact'
         uses: actions/upload-artifact@v4
