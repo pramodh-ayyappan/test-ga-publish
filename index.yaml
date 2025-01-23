@@ -3,9 +3,9 @@ entries:
   azure-nfs-log-collector:
   - apiVersion: v2
     appVersion: "1.0"
-    created: "2025-01-23T11:36:40.342933502Z"
+    created: "2025-01-23T11:39:54.469895667Z"
     description: A Helm chart for azure logging substack
-    digest: 8c3c1e3167ab8726253a9706f8b862d10239ac2c2106f43d3aa6bca0cd90d62f
+    digest: ceab12fb693f517ea7dff1eb536fac2653a556ea8a2ed0f921fe6134e35b6266
     home: https://facets-cloud.github.io
     maintainers:
     - email: rohit@facets.cloud
@@ -17,9 +17,9 @@ entries:
   database-operator:
   - apiVersion: v2
     appVersion: 1.0.1
-    created: "2025-01-23T11:36:40.34351055Z"
+    created: "2025-01-23T11:39:54.471519656Z"
     description: A Helm chart for database operator
-    digest: 057148a9a0c00d4465340b51268248505f16fa5b316555afd9cb199fd913cb34
+    digest: e70de927027f3887850eb1805e95c602e1727b5f0178be68da989eecd64335c5
     home: https://facets-cloud.github.io
     maintainers:
     - email: pramodh.ayyappan@facets.cloud
@@ -34,7 +34,21 @@ entries:
   facets-notification-controller:
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-01-23T11:36:40.343831288Z"
+    created: "2025-01-23T11:39:54.472950643Z"
+    description: A Helm chart for facets notification controller
+    digest: ca52c2a2ea881991f44a0b7e16b222be596da7aa193fa34598d1a13535584fe6
+    home: https://facets-cloud.github.io
+    maintainers:
+    - email: vishnu.kv@facets.cloud
+      name: Vishnu Kadavarath Viswambharan
+    name: facets-notification-controller
+    type: application
+    urls:
+    - facets-notification-controller-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
+    appVersion: 1.1.0
+    created: "2025-01-23T11:39:54.472229048Z"
     description: A Helm chart for facets notification controller
     digest: 46ee070523f25f5983e84326518b8affa620663e0519abb9e2c6671eb8af8333
     home: https://facets-cloud.github.io
@@ -49,9 +63,9 @@ entries:
   facets-uptime-monitoring:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2025-01-23T11:36:40.344349806Z"
+    created: "2025-01-23T11:39:54.473989408Z"
     description: A Helm chart for creating facets-uptime-monitoring operator
-    digest: 41f29ee7a6e3b462f3a3b7cff69fca8184b218ccef75c67b394dfafdba7e5dcd
+    digest: 65bc4da407cdbb65febece320a81b7065909ce1038530c40cf2d0d630f84a52f
     name: facets-uptime-monitoring
     type: application
     urls:
@@ -60,13 +74,13 @@ entries:
   kube-audit-rest:
   - apiVersion: v2
     appVersion: 7c6b957ec970acc705d95a1fac72ea7a15bef9c4
-    created: "2025-01-23T11:36:40.345038001Z"
+    created: "2025-01-23T11:39:54.475333012Z"
     description: |
       A helm chart for kube-audit-rest. Self Hosted Audit logs for Kubernetes.
 
       kube-audit-rest originally created by RichardoC
       https://github.com/RichardoC/kube-audit-rest/
-    digest: 667524ffe028cae7b1e9fbda99f872fbdee489826a735cd1026beef8aa1d99e6
+    digest: 5cf15fb0416baf965ce052c0ae677a0024855794366785e53a4de6d3a03ef946
     name: kube-audit-rest
     type: application
     urls:
@@ -75,9 +89,9 @@ entries:
   kubectl-crons:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-01-23T11:36:40.345298137Z"
+    created: "2025-01-23T11:39:54.47576106Z"
     description: A Helm chart for clusters to delete unwanted Pods based on their status
-    digest: 013b30ef0023a80e23e6fa2d22d9a7cfc981a422bbd97d5fc024f9166f4624c2
+    digest: 7a9c7c0c900b69295de9e000f208b0654224190b2b6726ab7df9254e15773996
     name: kubectl-crons
     type: application
     urls:
@@ -86,9 +100,9 @@ entries:
   mongodb-auth-operator:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-01-23T11:36:40.345845999Z"
+    created: "2025-01-23T11:39:54.476769088Z"
     description: A Helm chart for Kubernetes
-    digest: 416004954ab735b9d891109a7a097a50e37c909a38241cee63ce94d9fe1efb42
+    digest: 18ffacfddd05ca66983fd96c83662c6ebd79e9b9eaf35c97e1ac63dc96031b9a
     name: mongodb-auth-operator
     type: application
     urls:
@@ -97,9 +111,9 @@ entries:
   scheduled-deployment-scaler:
   - apiVersion: v2
     appVersion: "1"
-    created: "2025-01-23T11:36:40.34602845Z"
+    created: "2025-01-23T11:39:54.477100876Z"
     description: A Helm chart to schedule scaling of a deployment in a Kubernetes cluster
-    digest: 42296377cbeeee7ace04d5befb338e604720646e9a2a5a1f47b8ee81ff62b6b7
+    digest: 12744ab72ea73bcd9f5284d9a82bc2d09a44c5573518ede482539ab0f61c565b
     home: https://facets-cloud.github.io
     maintainers:
     - email: rohit@facets.cloud
@@ -113,9 +127,9 @@ entries:
   scheduled-hpa-updater:
   - apiVersion: v2
     appVersion: "1"
-    created: "2025-01-23T11:36:40.346251667Z"
+    created: "2025-01-23T11:39:54.47747328Z"
     description: A Helm chart to update autoscaling configuration of a deployment in a Kubernetes cluster
-    digest: 77ed38e60e8500b4ac52914adcfbba44082f578bf84241472e10ede328c0b234
+    digest: 304b6cc5f05b0438427d331e5a49bd626c5210ae8999c93a7a674212e474a1b5
     home: https://facets-cloud.github.io
     maintainers:
     - email: rohit@facets.cloud
@@ -128,9 +142,9 @@ entries:
     version: 0.2.0
   secret-copier:
   - apiVersion: v1
-    created: "2025-01-23T11:36:40.347076046Z"
+    created: "2025-01-23T11:39:54.478120396Z"
     description: Used to copy secrets from default namespace to all other namespaces.
-    digest: a0665b2d77fb67d4b9685f89af48f13c809b39787018c23cd890c6d40408ff2c
+    digest: 0d97b65e793fc52479f1c1511cf2f35023a2a2a1c1b9017ecda44c39e9158ad6
     name: secret-copier
     urls:
     - secret-copier-1.0.1.tgz
@@ -138,11 +152,11 @@ entries:
   windows-exporter:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-01-23T11:36:40.34765702Z"
+    created: "2025-01-23T11:39:54.478704414Z"
     description: A Helm chart to deploy windows-exporter and register to prometheus via podmonitor in a k8s cluster
-    digest: 78a805eb0bc4c217be13a482a0b3790a867e21c99b1bc71838a304574e68172e
+    digest: 4544ef92611329fcd941a245385ffc27c30caefdc306348eda31176086f9f1d4
     name: windows-exporter
     urls:
     - windows-exporter-0.1.0.tgz
     version: 0.1.0
-generated: "2025-01-23T11:36:40.34209137Z"
+generated: "2025-01-23T11:39:54.467935735Z"
